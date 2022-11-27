@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../layout/head', {title:"All Skills"} )%>
+
+
+    <body>
+        <h1>My Dev Skills</h1>
+        <ul>
+            <% skills.forEach(skill=> { %>
+                <%- include( '../partials/skillIntro' , {skill}) %>
+                    <% }) %>
+        </ul>
+    </body>
+
+</html>
