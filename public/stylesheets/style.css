@@ -3,8 +3,13 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+:root {
+  --link: #00B7FF;
+  --button: #9d3cf2;
+}
+
 a {
-  color: #00B7FF;
+  color: var(--link);
 }
 
 ul li a {
@@ -14,6 +19,52 @@ ul li a {
 p {
   margin: 10px 0;
   font-size: 1rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-center {
+  align-items: center;
+  justify-content: center;
+}
+
+.tb-margin {
+  margin: 5px 0;
+}
+
+label {
+  font-size: 1.5rem;
+}
+
+input[type="text"] {
+  padding: 5px;
+  margin-top: 5px;
+  font-size: 2rem;
+}
+
+input,
+button {
+  border: 2px solid var(--button);
+  border-radius: 3px;
+}
+
+a.button,
+button {
+  padding: 12px 25px;
+  background-color: #fff;
+  color: var(--button);
+  font-size: 1.5rem;
+}
+
+button[type="submit"] {
+  margin-top: 25px;
+  cursor: pointer;
 }
 
 .card {
@@ -30,4 +81,9 @@ p {
 #go-back {
   margin-bottom: 15px;
   display: block;
+}
+
+.block {
+  display: block;
+  text-align: right;
 }
