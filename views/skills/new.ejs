@@ -9,7 +9,7 @@
             &#8592; Go Back</a>
         <h1>Add Skill</h1>
 
-        <form action="/skills" method="POST" class="flex flex-column flex-center add-form">
+        <form action="/skills" method="POST" class="flex flex-column flex-center add-form card">
             <div class="flex flex-column tb-margin">
                 <label for="skill">Skill</label>
                 <input type="text" name="skill">
@@ -17,7 +17,7 @@
 
             <div class="flex flex-column tb-margin">
                 <label for="rating">Rating</label>
-                <input type="number" name="rating">
+                <input type="number" name="rating" min="0" max="10">
             </div>
 
             <div class="flex flex-column tb-margin">

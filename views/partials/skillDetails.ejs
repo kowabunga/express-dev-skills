@@ -1,11 +1,11 @@
 <div class="mb-25 flex flex-between">
-    <a href="/skills" class="go-back">Go Back</a>
-    <a href='/skills/<%= skill.id %>/edit' class="go-back">Edit Skill</a>
+    <a href="/skills" class="go-back">&#8592; Go Back</a>
+    <a href='/skills/<%= skill.id %>/edit' class="go-back">Edit Skill </a>
     <form action="/skills/<%- skill.id%>?_method=DELETE" method="POST">
-        <button class='form-btn' type="submit">Delete Skill</button>
+        <button class='form-btn' type="submit">Delete Skill </button>
     </form>
 </div>
-<div class="card">
+<div class="card flex flex-center flex-column">
     <h2>
         <%= skill.skill %>
     </h2>

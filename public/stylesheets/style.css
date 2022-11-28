@@ -9,14 +9,17 @@ body {
 
 :root {
   --link: #00B7FF;
-  --button: #9d3cf2;
+  --button: #9956d4;
 }
 
 a {
   color: var(--link);
 }
 
-
+ul li:not(:last-child) {
+  border-bottom: 1px solid rgb(225, 225, 225);
+  padding: 25px 0;
+}
 
 ul li a {
   margin-left: 25px;
@@ -29,6 +32,7 @@ p {
 
 .flex {
   display: flex;
+  align-items: center;
 }
 
 .flex-column {
@@ -36,12 +40,14 @@ p {
 }
 
 .flex-center {
-  align-items: center;
   justify-content: center;
 }
 
+.flex-end {
+  justify-content: flex-end;
+}
+
 .flex-between {
-  align-items: center;
   justify-content: space-between;
 }
 
@@ -100,24 +106,15 @@ button {
   padding: 12px 25px;
   background-color: #fff;
   color: var(--button);
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 .card {
   border-radius: 25px;
   box-shadow: 0 0 5px 5px rgb(131, 131, 131, .3);
   padding: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
 }
 
-.block {
-  display: block;
-  text-align: right;
-}
 
 .mb-25 {
   margin-bottom: 25px;

@@ -31,11 +31,8 @@ function create(req, res, next) {
 function edit(req, res, next) {
   const { id } = req.params;
 
-  if (req.method === 'GET') {
-    const singleSkill = Skills.getOne(id);
-    console.log(singleSkill);
-    res.render(`skills/edit`, { skill: singleSkill });
-  }
+  const singleSkill = Skills.getOne(id);
+  res.render(`skills/edit`, { skill: singleSkill });
 }
 
 function update(req, res, next) {

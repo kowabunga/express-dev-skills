@@ -9,7 +9,7 @@
         <h1>Edit Skill</h1>
 
         <form action="/skills/<%= skill.id %>?_method=PUT " method="POST"
-            class="flex flex-column flex-center edit-form">
+            class="flex flex-column flex-center edit-form card">
             <div class="flex flex-column tb-margin">
                 <label for="skill">Skill</label>
                 <input type="text" name="skill" value="<%= skill.skill %>">
