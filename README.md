@@ -10,14 +10,18 @@ The site is built with the following technologies:
 - Express
 - EJS
 
-To run the website, download the Git Repo. Once opening it up, run the command
+To run the website, download the Git Repo. Once opening it up, run the commands
 
-> npm start
+`npm install`
 
-on your computer and navigate to
+then, once that finishes, run
 
-> localhost:3000
+` npm start`
 
-on your browser.
+Then, on your computer, navigate to
+
+`localhost:3000`
+
+in your browser.
 
 ## Enjoy!
