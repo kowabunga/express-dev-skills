@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../layout/head', {title:"Add Skill"} )%>
+
+
+    <body>
+        <h1>Edit Skill</h1>
+        <form action="/skills/<%= skill.id %>?_method=PUT " method="POST" class="flex flex-column flex-center">
+            <div class="flex flex-column tb-margin">
+                <label for="skill">Skill</label>
+                <input type="text" name="skill" value="<%= skill.skill %>">
+            </div>
+
+            <div class="flex flex-column tb-margin">
+                <label for="rating">Rating</label>
+                <input type="number" name="rating" value="<%= skill.rating %>">
+            </div>
+
+            <div class="flex flex-column tb-margin">
+                <label for="about">About</label>
+                <textarea name="about" id="about"><%= skill.about %> </textarea>
+            </div>
+
+            <button type="submit">Edit Skill</button>
+        </form>
+    </body>
+
+</html>
