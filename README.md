@@ -18,10 +18,8 @@ then, once that finishes, run
 
 ` npm start`
 
-Then, on your computer, navigate to
+Lastly, in your browser, navigate to
 
 `localhost:3000`
-
-in your browser.
 
 ## Enjoy!
