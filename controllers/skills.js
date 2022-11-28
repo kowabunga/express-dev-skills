@@ -30,24 +30,23 @@ function create(req, res, next) {
 
 function edit(req, res, next) {
   const { id } = req.params;
-  const { skill, rating, about } = req.body;
 
   if (req.method === 'GET') {
     const singleSkill = Skills.getOne(id);
     console.log(singleSkill);
     res.render(`skills/edit`, { skill: singleSkill });
   }
+}
 
-  if (req.method === 'PUT') {
-    const updatedSkill = { skill, rating, about, id: parseInt(id) };
+function update(req, res, next) {
+  const { id } = req.params;
+  const { skill, rating, about } = req.body;
+  const updatedSkill = { skill, rating, about, id: parseInt(id) };
 
-    const newSkill = Skills.updateOne(id, updatedSkill);
+  const newSkill = Skills.updateOne(id, updatedSkill);
 
-    // Render the show page again, passing in the new skill
-
-    console.log();
-    res.render(`skills/show`, { skill: newSkill });
-  }
+  // Render the show page again, passing in the new skill
+  res.render(`skills/show`, { skill: newSkill });
 }
 
 function deleteSkill(req, res, next) {
@@ -62,5 +61,6 @@ module.exports = {
   new: newSkill,
   create,
   edit,
+  update,
   delete: deleteSkill,
 };

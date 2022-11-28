@@ -5,8 +5,11 @@
 
 
     <body>
+        <a href="/skills" class="go-back">&#8592; Go Back</a>
         <h1>Edit Skill</h1>
-        <form action="/skills/<%= skill.id %>?_method=PUT " method="POST" class="flex flex-column flex-center">
+
+        <form action="/skills/<%= skill.id %>?_method=PUT " method="POST"
+            class="flex flex-column flex-center edit-form">
             <div class="flex flex-column tb-margin">
                 <label for="skill">Skill</label>
                 <input type="text" name="skill" value="<%= skill.skill %>">

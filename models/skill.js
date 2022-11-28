@@ -44,12 +44,9 @@ function deleteOne(id) {
 }
 
 function updateOne(id, updatedSkill) {
-  console.log(skills);
   const pos = skills.findIndex(skill => skill.id === parseInt(id));
 
   skills[pos] = updatedSkill;
-
-  console.log(skills);
 
   return skills[pos];
 }
