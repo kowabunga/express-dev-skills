@@ -10,7 +10,7 @@ The site is built with the following technologies:
 - Express
 - EJS
 
-To run the website, download the Git Repo. Once opening it up, run the commands
+To run the website, download the Git Repo. Upon opening it up, run the commands
 
 `npm install`
 
