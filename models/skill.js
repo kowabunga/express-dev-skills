@@ -37,4 +37,10 @@ function addSkill(skill) {
   skills.push(skill);
 }
 
-module.exports = { getAll, getOne, addSkill };
+function deleteOne(id) {
+  // parseInt(id) because req.params are strings
+  const pos = skills.findIndex(skill => skill.id === parseInt(id));
+  skills.splice(pos, 1);
+}
+
+module.exports = { getAll, getOne, addSkill, deleteOne };

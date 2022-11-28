@@ -1,4 +1,9 @@
-<a href="/skills" id="go-back">Go Back</a>
+<div class="mb-5 flex flex-between">
+    <a href="/skills" id="go-back">Go Back</a>
+    <form action="/skills/<%- skill.id%>?_method=DELETE" method="POST">
+        <button class='form-btn' type="submit">Delete Skill</button>
+    </form>
+</div>
 <div class="card">
     <h2>
         <%= skill.skill %>

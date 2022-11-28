@@ -10,4 +10,7 @@ router.get('/:id', skillController.show);
 /* POST routes */
 router.post('/', skillController.create);
 
+/* DELETE routes */
+router.delete('/:id', skillController.delete);
+
 module.exports = router;
