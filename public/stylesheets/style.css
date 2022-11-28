@@ -42,12 +42,14 @@ label {
   font-size: 1.5rem;
 }
 
-input[type="text"] {
+textarea,
+input {
   padding: 5px;
   margin-top: 5px;
   font-size: 2rem;
 }
 
+textarea,
 input,
 button {
   border: 2px solid var(--button);

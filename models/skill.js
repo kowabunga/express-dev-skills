@@ -33,4 +33,8 @@ function getOne(id) {
   return skills.find(skill => skill.id === parseInt(id));
 }
 
-module.exports = { getAll, getOne };
+function addSkill(skill) {
+  skills.push(skill);
+}
+
+module.exports = { getAll, getOne, addSkill };

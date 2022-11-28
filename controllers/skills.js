@@ -1,5 +1,4 @@
-const { getAll, getOne } = require('../models/skill.js');
-const fs = require('fs');
+const { getAll, getOne, addSkill } = require('../models/skill.js');
 
 function index(req, res, next) {
   const allSkills = getAll();
@@ -18,12 +17,9 @@ function newSkill(req, res, next) {
 
 function create(req, res, next) {
   const { skill, rating, about } = req.body;
+  console.log(req.body);
 
-  const allSkills = [...getAll(), { skill, rating, about, id: Math.floor() }];
-
-  console.log(allSkills);
-
-  fs.writeFile('../models/skill.js');
+  addSkill({ skill, rating, about, id: Math.floor(Math.random() * 392493) });
 
   res.redirect('/skills');
 }
@@ -31,6 +27,6 @@ function create(req, res, next) {
 module.exports = {
   index,
   show,
-  newSkill,
+  new: newSkill,
   create,
 };
